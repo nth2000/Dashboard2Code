@@ -1,3 +1,11 @@
+# Dashboard2Code: Evaluating Multimodal Models on Reconstructing Interactive Dashboards
+
+<img width="497" height="480" alt="图片" src="https://github.com/user-attachments/assets/caf33042-2cc7-4694-b433-337ba31b8317" />
+
+Automatic data visualization generation have advanced rapidly with multi-modal large language models, yet existing efforts largely focus on static charts and overlook the interactive dashboards commonly used for real-world data exploration. We introduce Dashboard2Code, a novel task that requires a model to proactively explore an interactive dashboard, acquire and integrate feedback from its own interactions (e.g., clicking and filtering), and generate code that reproduces the target dashboard.
+
+
+
 ## Setup
 ```
 conda create -n dashboard2code python=3.10
@@ -34,3 +42,10 @@ python run_evals.py
 ```
 python generate_experiment_report.py
 ```
+
+## Results
+<img width="852" height="362" alt="图片" src="https://github.com/user-attachments/assets/9cedbf3b-aa0c-40f1-8d52-a28ecb3a1ff3" />
+
+
+## Contact info
+If you have any questions or issues, feel free to contact thniu@ir.hit.edu.cn 
