@@ -1,3 +1,12 @@
+# Dashboard2Code: Evaluating Multimodal Models on Reconstructing Interactive Dashboards
+
+<img width="497" height="480" alt="图片" src="https://github.com/user-attachments/assets/caf33042-2cc7-4694-b433-337ba31b8317" />
+
+Automatic data visualization generation have advanced rapidly with multi-modal large language models, yet existing efforts largely focus on static charts and overlook the interactive dashboards commonly used for real-world data exploration. We introduce Dashboard2Code, a novel task that requires a model to proactively explore an interactive dashboard, acquire and integrate feedback from its own interactions (e.g., clicking and filtering), and generate code that reproduces the target dashboard. To support comprehensive evaluation, we present DashboardMimic, the first Plotly+Dash benchmark for Dashboard2Code, comprising 180 carefully designed and manually verified dashboard–code pairs spanning three difficulty levels and covering eight common real-world interaction patterns. We further propose an automated evaluation framework tailored to dashboards that combines code semantic analysis with dynamic interaction-based testing to assess visual and interaction consistency, showing strong agreement with human judgments. Experiments across a range of open- and closed-source multi-modal models reveal that even the strongest systems struggle on high-complexity dashboards and that a substantial performance gap remains between open-source and closed-source models on the Dashboard2Code task.
+
+
+
+
 ## Setup
 ```
 conda create -n dashboard2code python=3.10
