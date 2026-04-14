@@ -371,23 +371,13 @@ def run_generation(dashboard_list_path, output_dir, output_file, server_host='lo
 
 
 if __name__ == '__main__':
-    # 参数解析
-    # dashboard_list_path = 'data/datasets/debug.json'
-    dashboard_list_path = 'data/datasets/debug.json'
+    dashboard_list_path = 'data/datasets/dashboard2code_v1.json'
     output_dir = 'generated_outputs'
-    output_file = 'debug.json'
-    # output_file = 'dashboard2code_v1_claude_without_dom.json'
+    output_file = 'gemini3pro_without_dom.json'
+
     enable_matching = True
     enable_compression = True
     enable_a11y = True
-
-    if len(sys.argv) > 1:
-        dashboard_list_path = sys.argv[1]
-    if len(sys.argv) > 2:
-        output_dir = sys.argv[2]
-    # 简化的参数处理，实际使用可换 argparse
-    if len(sys.argv) > 3:
-        enable_matching = sys.argv[3].lower() != 'false'
 
     run_generation(dashboard_list_path, output_dir, output_file,
                    enable_screenshot_matching=enable_matching,
