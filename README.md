@@ -14,11 +14,7 @@ python dashboard_server.py
 ```
 
 ### Code Generation
-Configure the parameters in batch_generate.py
-```
-dashboard_list_path, output_dir, output_file, enable_matching, enable_compression, enable_a11y
-```
-Run the script
+Configure the parameters in batch_generate.py, then run the script.
 ```
 python batch_generate.py
 ```
