@@ -3,3 +3,9 @@ dash_ag_grid
 dash-bootstrap-components
 dash_daq
 selenium
+astor
+Pillow
+openai
+numpy
+pandas
+tqdm

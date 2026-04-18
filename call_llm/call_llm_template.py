@@ -12,6 +12,9 @@ client = OpenAI(api_key=api_key, base_url=api_base)
 
 
 def call_llm(messages, model="gpt-5", max_retries=10, initial_delay=1):
+    """
+    Processes the input messages and returns the model's string response.
+    """
     delay = initial_delay
 
     for attempt in range(1, max_retries + 1):
@@ -25,37 +28,39 @@ def call_llm(messages, model="gpt-5", max_retries=10, initial_delay=1):
                 max_completion_tokens=32768
             )
             if not completion.choices:
-                raise ValueError("API返回了空的 choices 列表")
+                raise ValueError("API returned an empty choices list")
 
             message_obj = completion.choices[0].message
             content = message_obj.content
 
             if not content:
-                raise ValueError("API返回的 content 为空 (None or Empty String)")
+                raise ValueError("API returned empty content (None or Empty String)")
 
             if hasattr(completion, 'usage') and completion.usage:
-                print(f"✔ 成功 | Input: {completion.usage.prompt_tokens} | Output: {completion.usage.completion_tokens}")
+                print(f"✔ Success | Input: {completion.usage.prompt_tokens} | Output: {completion.usage.completion_tokens}")
 
             return content
 
         except Exception as e:
-            print(f"⚠ 失败 (第 {attempt}/{max_retries} 次): {e}")
+            print(f"⚠ Failed (Attempt {attempt}/{max_retries}): {e}")
 
             if attempt == max_retries:
-                print("❌ 已达到最大重试次数，彻底放弃。")
+                print("❌ Maximum retries reached. Giving up.")
                 raise e
 
             time.sleep(delay)
             delay *= 1.5
-            print(f"⏳ 等待 {delay:.1f} 秒后重试...")
+            print(f"⏳ Waiting {delay:.1f} seconds before retrying...")
 
     return None
 
 if __name__ == "__main__":
     print("-" * 50)
 
-    with open("temp.txt", "r", encoding="utf-8") as f:
-        content = f.read()
+    # with open("temp.txt", "r", encoding="utf-8") as f:
+    #     content = f.read()
+
+    content = "hello, introduce yourself"
 
     test_messages = [
         {
@@ -66,15 +71,15 @@ if __name__ == "__main__":
     try:
         response = call_llm(test_messages, "gpt-5", max_retries=5, initial_delay=2)
 
-        # 检查响应
+        # Check response
         if response:
-            print("✓ API调用成功！")
-            print("\n响应内容:")
+            print("✓ API call successful!")
+            print("\nResponse content:")
             print(response)
             print("-" * 50)
         else:
-            print("✗ API调用失败：未获取到有效响应")
+            print("✗ API call failed: No valid response received")
 
     except Exception as e:
-        print(f"✗ API调用最终失败：{type(e).__name__}")
-        print(f"错误详情：{str(e)}")
+        print(f"✗ API call ultimately failed: {type(e).__name__}")
+        print(f"Error details: {str(e)}")
