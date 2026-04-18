@@ -44,9 +44,10 @@ Steps above are merged in ```run_evals.py```.
 cd evaluation
 python run_evals.py
 ```
-4. run ```generate_experiment_report.py``` to generate the final evaluation results.
+4. run ```generate_experiment_report.py``` to generate the final evaluation results, and run ```visualize_report.py``` to visualize the results.
 ```
 python generate_experiment_report.py
+streamlit run visualize_report.py
 ```
 
 ## Results
