@@ -1,6 +1,6 @@
 # Dashboard2Code: Evaluating Multimodal Models on Reconstructing Interactive Dashboards
 
-<img width="497" height="480" alt="图片" src="https://github.com/user-attachments/assets/caf33042-2cc7-4694-b433-337ba31b8317" />
+<img width="1781" height="1885" alt="图片" src="https://github.com/user-attachments/assets/444c5672-251b-4603-abfb-f782b10822fd" />
 
 Automatic data visualization generation have advanced rapidly with multi-modal large language models, yet existing efforts largely focus on static charts and overlook the interactive dashboards commonly used for real-world data exploration. We introduce Dashboard2Code, a novel task that requires a model to proactively explore an interactive dashboard, acquire and integrate feedback from its own interactions (e.g., clicking and filtering), and generate code that reproduces the target dashboard.
 
