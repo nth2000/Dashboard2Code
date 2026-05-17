@@ -373,7 +373,7 @@ def run_generation(dashboard_list_path, output_dir, output_file, server_host='lo
 if __name__ == '__main__':
     dashboard_list_path = 'data/datasets/dashboard2code_v1.json'
     output_dir = 'generated_outputs'
-    output_file = 'gemini3pro_without_dom.json'
+    output_file = 'gemini3pro_with_dom.json'
 
     enable_matching = True
     enable_compression = True
