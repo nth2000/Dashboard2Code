@@ -53,6 +53,10 @@ streamlit run visualize_report.py
 ## Results
 <img width="852" height="362" alt="图片" src="https://github.com/user-attachments/assets/9cedbf3b-aa0c-40f1-8d52-a28ecb3a1ff3" />
 
+## Safety Consideration
+> [!WARNING]  
+> This repository involves executing untrusted, model-generated code. We strongly advise users to be aware of the associated safety risks. While it is highly unlikely that such code will perform overtly malicious actions under our current settings and with the models we use, it may still behave destructively due to limitations in model capability or alignment. By using this repository, you acknowledge and accept these risks.
+
 
 ## Contact info
 If you have any questions or issues, feel free to contact thniu@ir.hit.edu.cn 
