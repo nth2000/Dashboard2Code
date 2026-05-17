@@ -55,7 +55,7 @@ streamlit run visualize_report.py
 
 ## Safety Consideration
 > [!WARNING]  
-> This repository involves executing untrusted, model-generated code. We strongly advise users to be aware of the associated safety risks. While it is highly unlikely that such code will perform overtly malicious actions under our current settings and with the models we use, it may still behave destructively due to limitations in model capability or alignment. By using this repository, you acknowledge and accept these risks.
+> This repository involves executing untrusted, model-generated code. We strongly advise users to be aware of the associated safety risks. While it is highly unlikely that such code will perform overtly malicious actions under our current settings, it may still behave destructively due to limitations in model capability or alignment. By using this repository, you acknowledge and accept these risks.
 
 
 ## Contact info
